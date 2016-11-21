@@ -1,9 +1,6 @@
 {
     "extends": [
-        "tslint:recommended", 
-        "tslint-microsoft-contrib", 
-        "tslint-react",
-        "tslint-eslint-rules"
+        "tslint:recommended" 
     ],
     "rules": {}
 }
