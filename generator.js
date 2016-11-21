@@ -9,7 +9,7 @@ const moduleDirectory = path.dirname(require.resolve('tslint'));
 const CORE_RULES_DIRECTORY = path.resolve(moduleDirectory, ".", "rules");
 const tslintFileName = './tslint.json';
 const configuration = tslint.Configuration.loadConfigurationFromPath(tslintFileName);
-const ruleDirectories = [CORE_RULES_DIRECTORY].concat(configure.ruleDirectories);
+const ruleDirectories = [CORE_RULES_DIRECTORY].concat(configuration.rulesDirectories);
 
 let directories = tslint.Configuration.getRulesDirectories(rulesDirectories);
 
