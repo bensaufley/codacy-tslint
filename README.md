@@ -26,3 +26,19 @@ docker run -t \
 nlesc/codacy-tslint
 ```
 
+docker run -t \
+--net=none \
+--privileged=false \
+--cap-drop=ALL \
+--user=docker \
+--rm=true \
+-v /home/verhoes/git/molviewer-tsx:/src:ro \
+nlesc/codacy-tslint
+
+# Generate
+
+Make sure the packages with their own rules are included in the `tslint.json` file.
+
+## Patterns.json
+
+node generator.js patterns

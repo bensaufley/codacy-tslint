@@ -14,7 +14,7 @@ if (fs.existsSync(codacyConfigFn)) {
 }
 
 const tslintFileName = path.join(root, 'tslint.json');
-let configuration = {extends: 'tslint:recommended', rules: []}; 
+let configuration = {extends: 'tslint:recommended', rules: {}}; 
 if (fs.existsSync(tslintFileName)) {
     configuration = Linter.loadConfigurationFromPath(tslintFileName);
 }
