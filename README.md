@@ -9,20 +9,21 @@ Followed instructions at https://support.codacy.com/hc/en-us/articles/207994725-
 ## Usage
 
 Create Docker container with:
-```
+
+```sh
 docker build -t nlesc/codacy-tslint .
 ```
 
 Test Docker container with:
 
-```
+```sh
 docker run -t \
---net=none \
---privileged=false \
---cap-drop=ALL \
---user=docker \
---rm=true \
--v <PATH-TO-FOLDER-WITH-FILES-TO-CHECK>:/src:ro \
-nlesc/codacy-tslint
+  --net=none \
+  --privileged=false \
+  --cap-drop=ALL \
+  --user=docker \
+  --rm=true \
+  -v <PATH-TO-FOLDER-WITH-FILES-TO-CHECK>:/src:ro \
+  bensaufley/codacy-tslint
 ```
 
