@@ -8,7 +8,8 @@ RUN npm install
 RUN mkdir -p /usr/src/app/build && cp -a /tmp/node_modules /usr/src/app
 COPY ./src/tslint.base.json /usr/src/app/build
 WORKDIR /usr/src/app
-RUN npm build
+COPY . /usr/src/app
+RUN npm run build
 
 FROM mhart/alpine-node:10.12
 
@@ -28,4 +29,4 @@ WORKDIR /src
 USER docker
 VOLUME /src
 
-CMD ["/usr/bin/codacy-tslint"]
+CMD ["node", "/usr/src/app/index.js"]

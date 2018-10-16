@@ -1,7 +1,6 @@
 {
   "name": "tslint",
   "patterns": [
-    // TSLint Core Rules: https://palantir.github.io/tslint/rules/
     {
       "patternId": "adjacent-overload-signatures",
       "level": "Warning",
@@ -727,7 +726,6 @@
       "level": "Warning",
       "category": "CodeStyle"
     },
-    // tslint-microsoft-contrib: https://github.com/Microsoft/tslint-microsoft-contrib
     {
       "patternId": "chai-prefer-contains-to-index-of",
       "level": "Warning",
@@ -1168,7 +1166,6 @@
       "level": "Warning",
       "category": "CodeStyle"
     },
-    // tslint-eslint-rules: https://github.com/buzinas/tslint-eslint-rules
     {
       "patternId": "array-bracket-spacing",
       "level": "Warning",

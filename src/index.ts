@@ -2,9 +2,7 @@ import * as fs from 'fs';
 import * as globby from 'globby';
 import * as path from 'path';
 import { Linter, Configuration, ILinterOptions, RuleFailure, IOptions } from 'tslint';
-import { CodacyConfig, CodacyPattern, CodacyTool } from './codacy';
-import { stringify } from 'querystring';
-import { IConfigurationFile } from 'tslint/lib/configuration';
+import { CodacyConfig, CodacyPattern } from './codacy';
 
 const defaultConfigPath = path.resolve('.', 'tslint.base.json');
 const root = '/src';
